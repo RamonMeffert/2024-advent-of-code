@@ -28,4 +28,6 @@ curl_output=$(curl -sS -f --create-dirs -o $problem_id/input -b cookie https://a
 if [ $? -ne 0 ]; then
   echo "Something went wrong receiving the input for problem $1:";
   echo "    $curl_output"
+else
+  echo "Done! Created ./$problem_id/input".
 fi
